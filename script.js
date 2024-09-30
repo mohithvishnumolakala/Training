@@ -11,6 +11,9 @@ const pauseButton = document.getElementById("pause");
 const resetButton = document.getElementById("reset");
 
 function startTimer() {
+  // Clear any existing timer interval
+  clearInterval(timerInterval);
+  
   timerInterval = setInterval(() => {
     seconds++;
 
