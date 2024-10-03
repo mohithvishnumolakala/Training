@@ -2,7 +2,8 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-image: url("C:/Users/senas/Downloads/FTZ/bg1.jpg");
+  background-image: url("assets/bg1.jpg");
+  background-size: cover;
 }
 .container{
 padding: 4% 14%;
@@ -16,7 +17,7 @@ padding: 4% 14%;
   right:15em;
   padding:6px;
   color: #fff;
-  background-color: #29416D;
+  background-color: #3B5A89;
  
 }
 
@@ -24,15 +25,27 @@ padding: 4% 14%;
   color: #fff;
   text-decoration: none;
 }
+.actions a:not(:last-child)::after {
+  content: " | ";
+  margin: 5px; 
+}
+
+.separator {
+  margin: 0 4px; 
+  color:#ffffff;  
+}
+
 
 .header { 
-  background-color: #10223A;
+  background-color:rgba(21, 43, 67, 0.7);
   position: relative;
   display: flex;
   height:8vh;
-  justify-content: space-between;
+
   align-items: center;
-  padding: 5px 20px;
+  padding: 5px 10px;
+  border: darkslategrey;
+  border-style: double;
   
 }
 
@@ -48,9 +61,10 @@ header img{
 
 
 .nav a{
-  color: rgb(43, 163, 163);
+  color:#A4D3EA;
   text-decoration:none;
-  padding: 12px;
+  font-size: large;
+  padding: 3px;
 }
 
 .trans{
@@ -62,13 +76,22 @@ header img{
   font-weight: bold;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
+.square{
+  border:#6B7486;
+  border-width: thin;
+  margin-right: 45px;
+  border-style: solid none;
+}
 
 .sections {
   display: flex;
-  background-color: #10223A;
+  background-color:rgba(21, 43, 67, 0.7);
   flex-direction: row;
-  justify-content: left;
+  justify-content: center;
   padding: 0.1em;
+  border: darkslategray;
+  border-style: double;
+  border-top:0;
 }
 
 .section {
@@ -76,6 +99,7 @@ header img{
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
   margin: 20px;
   width: calc(33.33% - 20px);
+  flex-basis: 33.33%;
 }
 .section ul{
   list-style-type: none;
@@ -84,7 +108,7 @@ header img{
 
 }
 .section a{
-  color:#8EA2BA ;
+  color:#C9DDEE ;
   
 }
 
@@ -99,23 +123,33 @@ header img{
   width: calc(55.33%);
 }
 .sect a{
-  color:#6A718D;
+  color:#8B9BAC;
 }
 .sect h1{
   position:relative;
   top:0;
 }
 .over{
-  border:#9badb5;
+  color: #10213B;
   padding-left: 25px;
   padding-bottom:10px;
+  border:#6B7486;
+  border-width: thin;
   border-style: solid none;
+
+}
+.over p{
+  color:white;
 }
 .button{
-  border-radius: 1px;
-  background-color: #175A77;
+  border-style: inset;
+  border-color: cadetblue;
+  border-radius: 8px;
+  border-right: none;
+  background-color: #1D597A;
   font-size: larger;
-  padding: 2px;
+  padding: 5px;
+
   
   
 }
@@ -125,7 +159,7 @@ header img{
 }
 
 footer {
-  background-color: #29416D;
+  background-color:  #3B5A89;
   color: #fff;
   margin-top:8px;
   padding: 0.3em;
@@ -141,9 +175,11 @@ footer a{
   color: white;
   position: relative;
   
+  
 }
-
-
+.separator {
+  margin: 0 3px; 
+}
 
 @media (max-width: 768px) {
   .sections {
@@ -160,8 +196,7 @@ footer a{
   header nav ul {
     flex-direction: column;
   }
-
+}
   header nav li {
     margin-bottom: 10px;
   }
-}
