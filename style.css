@@ -1,0 +1,266 @@
+body {
+  background-image: url(assets/background12.png);
+  font-family: sans-serif;
+  margin: 0;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+}
+.top-nav {
+  margin: auto;
+  font-size: 12px;
+  width: 67.5%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+.top-nav ul {
+  list-style-type: none;
+  margin: 1px;
+}
+.top-nav li {
+  display: inline;
+}
+.top-nav a {
+  text-decoration: none;
+  color: gray;
+}
+.top-nav ul li:not(:last-child)::after {
+  content: "|";
+  padding: 12px;
+}
+.cart-icon {
+  padding-right: 3px;
+}
+.options {
+  display: flex;
+  background-color: #d9d7d8;
+  color: white;
+  border: 5px double rgb(255, 255, 255);
+  border-left: 0;
+  border-right: 0;
+}
+.options ul {
+  height: 25px;
+  display: flex;
+  align-items: center;
+  padding: 0px;
+  margin-left: 15%;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.options li {
+  padding: 6px 15px;
+  font-size: 12px;
+  list-style: none;
+  display: inline;
+  color: black;
+  border-right: 1px solid white;
+}
+.box {
+  display: flex;
+  align-items: center;
+  padding-left: 40px;
+  justify-content: space-between;
+}
+.box input {
+  height: 12px;
+  font-size: 11px;
+  border: none;
+  border-width: 2px;
+  border-style: inset;
+}
+.box button {
+  border: none;
+  background-color: white;
+  height: 18px;
+  margin-left: 20px;
+  border-radius: 4px;
+}
+.offers {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid gray;
+  align-items: center;
+}
+.offers span {
+  font-size: 12px;
+}
+.offers ul {
+  margin: 0%;
+  margin-left: 13%;
+}
+.offers li {
+  display: inline;
+  font-size: 12px;
+  color: navy;
+}
+.offers li:not(:last-child)::after {
+  content: "o";
+  padding: 10px;
+}
+.bridal {
+  margin-right: 21%;
+  display: flex;
+  align-items: center;
+  color: navy;
+}
+.bridal img {
+  height: 50%;
+}
+.main {
+  margin: auto;
+  width: 68%;
+}
+.outer-cups {
+  display: flex;
+  border: 5px solid white;
+}
+.cups {
+  width: 70%;
+  background-image: url("/assets/recipe1.png");
+  border-right: 5px solid white;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.table {
+  border: 1px solid rgb(95, 87, 87);
+  color: white;
+  background-color: #3d3c3a;
+  margin: 1px;
+  padding: 20px;
+}
+.table ul {
+  padding: 0;
+}
+.table li {
+  list-style: none;
+  padding: 8px 0px;
+
+  border-bottom: 1px solid rgb(99, 97, 97);
+}
+.outer-table {
+  width: 30%;
+  padding: 5px;
+  background-color: #3d3c3a;
+}
+.table span {
+  font-size: 28px;
+}
+.table p {
+  color: rgb(151, 148, 148);
+  font-size: 15px;
+  line-height: 1.5;
+}
+.table a {
+  font-size: 12px;
+  color: gray;
+}
+.frames {
+  border: 5px solid black;
+  display: flex;
+  background-color: white;
+}
+.frames div {
+  width: 33.33%;
+  height: 160px;
+}
+.seperator {
+  width: 1px;
+  margin: 5px;
+  background-color: rgb(117, 107, 107);
+}
+.glasses {
+  background-image: url("assets/promo_glass.png");
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: 100% 78%;
+}
+
+.glasses section {
+  padding: 15px;
+  padding-bottom: 0;
+}
+.plates section {
+  padding: 14px;
+  padding-bottom: 0;
+}
+
+.g-title {
+  font-weight: bold;
+  font-size: 14px;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+.g-span {
+  font-size: 12px;
+  color: rgb(67, 64, 64);
+  float: right;
+  margin: 20px 11px;
+}
+.g-desc {
+  font-size: 11px;
+  color: gray;
+  line-height: 1.5;
+  margin-top: 4px;
+  margin-bottom: 0;
+}
+.plates {
+  background-image: url("/assets/promo_plates.png");
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: auto;
+}
+.mirror {
+  background-image: url("/assets/promo_album.png");
+  background-repeat: no-repeat;
+  background-position: right;
+}
+.mirror section {
+  width: 50%;
+  margin-bottom: 25px;
+  padding: 0px 14px;
+}
+.m-title {
+  font-weight: bold;
+  line-height: 1.5;
+  font-size: 14px;
+  margin-bottom: 0;
+  margin-top: 15px;
+}
+.m-span {
+  font-size: 12px;
+  color: rgb(67, 64, 64);
+  margin: 0px 12px;
+}
+.footer {
+  font-size: 12px;
+  display: flex;
+  color: gray;
+}
+.footer-left {
+  width: 68%;
+}
+
+.footer-left li {
+  display: inline;
+}
+.footer-left li:not(:last-child)::after {
+  content: "|";
+  padding: 10px;
+}
+.footer-left a {
+  color: gray;
+}
+.footer-left ul {
+  padding: 0;
+  font-size: 12px;
+}
+.footer-box button {
+  border-radius: 4px;
+  margin-left: 10px;
+}
+.footer-right {
+  font-size: 11px;
+}
