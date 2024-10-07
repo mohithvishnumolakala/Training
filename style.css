@@ -1,5 +1,5 @@
 body {
-  background-image: url(assets/background12.png);
+  background-image: url(assets/background.png);
   font-family: sans-serif;
   margin: 0;
 }
@@ -119,7 +119,7 @@ body {
 }
 .cups {
   width: 70%;
-  background-image: url("/assets/recipe1.png");
+  background-image: url("/assets/recipee.png");
   border-right: 5px solid white;
   background-repeat: no-repeat;
   background-size: cover;
@@ -172,7 +172,7 @@ body {
   background-color: rgb(117, 107, 107);
 }
 .glasses {
-  background-image: url("assets/promo_glass.png");
+  background-image: url("assets/promoglass.png");
   background-repeat: no-repeat;
   background-position: bottom;
   background-size: 100% 78%;
@@ -207,13 +207,13 @@ body {
   margin-bottom: 0;
 }
 .plates {
-  background-image: url("/assets/promo_plates.png");
+  background-image: url("/assets/promoplates.png");
   background-repeat: no-repeat;
   background-position: bottom;
   background-size: auto;
 }
 .mirror {
-  background-image: url("/assets/promo_album.png");
+  background-image: url("/assets/promoalbum.png");
   background-repeat: no-repeat;
   background-position: right;
 }
