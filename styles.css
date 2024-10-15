@@ -1,15 +1,20 @@
+:root {
+  --bodyfontfamily: sans-serif;
+  --bodybackgroundcolor: #fff;
+}
+
 * {
   margin: 0;
   padding: 0;
 }
 
-#main_container_app {
+#main_container {
   background-color: #fdf8f3;
 }
 body {
-  background-color: #fff;
-  color: #000;
-  font-family: quicksand;
+  background-color: var(--bodybackgroundcolor);
+  color: gray;
+  font-family: var(--bodyfontfamily);
 }
 
 header {
@@ -18,7 +23,7 @@ header {
   margin-right: 5%;
 }
 
-.nav {
+.navbar {
   display: grid;
   grid-template-columns: 20% 60% 19%;
   align-items: center;
@@ -32,23 +37,23 @@ header {
   display: none;
 }
 
-#image_one #desktop_image {
+#desktop-hero-image #desktop_image {
   width: 100%;
   height: 100%;
 }
 
-#image_one_one {
+#hero-section {
   display: grid;
   grid-template-columns: 50% 50%;
   margin-top: 2%;
 }
 
-#matter_one_images img {
+#hero-image-container img {
   width: 100%;
   height: 100%;
 }
 
-#nav_img {
+#brand-logo {
   width: 100%;
   display: grid;
   grid-template-columns: 100%;
@@ -60,33 +65,33 @@ header {
   text-align: left;
 }
 
-#nav_menu {
+#desktop-menu {
   width: 100%;
   display: grid;
   grid-template-columns: 100%;
   margin: 1%;
 }
 
-#nav_menu ul li {
+#desktop-menu ul li {
   list-style-type: none;
   display: inline;
   float: right;
   margin: 5px;
 }
 
-#nav_menu ul {
+#desktop-menu ul {
   float: right;
   margin-right: 2%;
 }
 
-#nav_menu ul li a {
+#desktop-menu ul li a {
   text-decoration: none;
   color: grey;
   font: weight 300px;
   font-size: 20px;
 }
 
-#nav_twi {
+#twitter-signin {
   width: 100%;
   height: 98%;
   display: grid;
@@ -100,7 +105,7 @@ header {
   color: white;
 }
 
-#nav_twi_a_a {
+#cta-buttons {
   width: 60%;
   height: 100%;
   display: grid;
@@ -114,7 +119,7 @@ header {
   margin-top: 2%;
 }
 
-#nav_twi_a {
+#signin-twitter-btn {
   width: 100%;
   height: 100%;
   display: grid;
@@ -131,20 +136,21 @@ header {
 
 #learn_more {
   font-size: 10px;
+  margin-left: 10%;
 }
 
-.images-hower {
+.profile-images {
   margin-top: 3%;
   margin-left: 3%;
 }
 
-.images-hower img {
+.profile-images img {
   width: 40px;
   height: 40px;
   margin-left: -4%;
 }
 
-#nav_img_main {
+#twitter-logo {
   width: 100%;
   height: 100%;
   display: grid;
@@ -154,7 +160,7 @@ header {
   justify-content: center;
 }
 
-#nav_img_title {
+#twitter-signin-text {
   width: 100%;
   display: grid;
   grid-template-columns: 100%;
@@ -170,6 +176,7 @@ img {
 
 .features_heading {
   margin-top: 2%;
+  color: black;
 }
 
 .options {
@@ -191,17 +198,17 @@ img {
   margin-left: 3%;
 }
 
-.features_main_up_a {
+.feature-item {
   display: grid;
   grid-template-columns: 50% 50%;
   margin: 2%;
 }
 
-.features_main_up_in {
+.features-grid {
   padding: 1%;
 }
 
-.features_main_up {
+.features-section {
   margin-left: 5%;
   margin-right: 5%;
 }
@@ -210,6 +217,9 @@ img {
   margin: 1%;
   border: solid grey 1px;
   padding: 2%;
+}
+.feature h4 {
+  color: black;
 }
 
 #customers_grid {
@@ -223,11 +233,11 @@ img {
   height: 40%;
 }
 
-.features_main_up_customers {
+.features_main_customers {
   background-color: #d7f5f5;
 }
 
-#customers_main_up_inner {
+#customers_inner {
   padding: 5%;
 }
 
@@ -253,6 +263,14 @@ img {
   align-items: center;
   justify-content: center;
   margin: 2%;
+}
+.fullname {
+  color: black;
+  font-weight: bolder;
+}
+.prices_title h2 {
+  color: black;
+  font-weight: bold;
 }
 
 .footer_inner {
@@ -432,21 +450,23 @@ img {
   .matter {
     display: none;
   }
-  #matter_one {
+  #hero-content {
     display: block;
   }
 
-  #menu_mb_image {
+  #menu_mobile_image {
     display: none;
   }
 }
 
-#matter_one {
+#hero-content {
   padding: 4%;
 }
-#matter_content_main_p {
+#matter_content_heading {
   font-size: 40px;
   font-weight: bolder;
+  color: black;
+  font-family: sans-serif;
 }
 
 @media (max-width: 769px) {
@@ -457,7 +477,7 @@ img {
     display: none;
   }
 
-  #matter_one {
+  #hero-content {
     display: none;
   }
 
@@ -469,12 +489,13 @@ img {
   #matter_mobile {
     font-size: 30px;
     font-weight: 600;
+    color: black;
   }
   #mobile_para {
     color: grey;
   }
 
-  #nav_twi_a_mb {
+  #signin-twitter-mobile-btn {
     width: 70%;
     height: 100%;
     display: grid;
@@ -488,16 +509,16 @@ img {
     padding: 2%;
   }
 
-  #nav_img_main_mb {
+  #signin-twitter-mobile-logo {
     align-items: right;
     margin-left: 2%;
   }
 
-  #nav_img_title_mb_a {
-    font-size: 20px;
+  #signin-twitter-mobile-text {
+    font-size: 17px;
   }
 
-  .nav_img_title_mb_a {
+  .signin-twitter-mobile-text {
     text-align: left;
   }
 
@@ -506,24 +527,24 @@ img {
     margin-right: auto;
   }
 
-  #nav_twi_a_a_mb {
+  #cta-buttons-mobile {
     margin-left: auto;
     margin-right: auto;
     text-align: center;
   }
 
-  #learn_more_mb a {
+  #learn_moree a {
     text-decoration: none;
     font-size: 20px;
     font-weight: bolder;
     color: #1da1f2;
   }
 
-  #learn_more_mb {
+  #learn_moree {
     margin-top: 2%;
   }
 
-  .features_main_up_a {
+  .feature-item {
     display: flex;
     flex-direction: column;
     margin: 2%;
@@ -548,20 +569,20 @@ img {
     width: 90%;
   }
 
-  #nav_menu {
+  #desktop-menu {
     display: none;
   }
 
-  #nav_twi {
+  #twitter-signin {
     display: none;
   }
 
-  .nav {
+  .navbar {
     display: grid;
     grid-template-columns: 99% 1%;
   }
 
-  #image_one {
+  #desktop-hero-image {
     padding: 3%;
   }
 
