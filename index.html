@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lift Management System</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="lift-container">
+      <div id="lift" class="lift">Lift</div>
+    </div>
+
+    <div class="options">
+      <input
+        type="number"
+        id="floorInput"
+        placeholder="Enter floor number (0-5)"
+        min="0"
+        max="5"
+      />
+      <button onclick="requestLift()">Submit</button>
+      <div class="status" id="status">Lift is stationary.</div>
+      <div class="direction" id="direction">Direction: Stopped</div>
+      <div class="matter-container" id="matter"></div>
+    </div>
+
+    <script src="lift.js"></script>
+  </body>
+</html>
