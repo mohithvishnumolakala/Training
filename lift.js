@@ -7,6 +7,7 @@ const liftElement = document.getElementById("lift");
 const statusElement = document.getElementById("status");
 const directionElement = document.getElementById("direction");
 const logElement = document.getElementById("matter");
+const queueElement = document.getElementById("queue");
 
 function requestLift() {
     const requestedFloor = parseInt(document.getElementById("floorInput").value);
@@ -15,14 +16,19 @@ function requestLift() {
         updateLog("Invalid floor number! Enter a number between 0 and " + totalFloors + ".");
         return;
     }
-    
+
     if (requestedFloor === currentFloor) {
         updateLog(`Lift is already on floor ${requestedFloor}.`);
         return;
     }
 
-    queue.push(requestedFloor);
-    updateLog(`Request added for floor ${requestedFloor}.`);
+    if (!queue.includes(requestedFloor)) {
+        queue.push(requestedFloor);
+        updateQueue();
+        updateLog(`Request added for floor ${requestedFloor}.`);
+    } else {
+        updateLog(`Floor ${requestedFloor} is already in the queue.`);
+    }
     
     if (!isMoving) {
         processQueue();
@@ -32,6 +38,7 @@ function requestLift() {
 function processQueue() {
     if (queue.length > 0) {
         const nextFloor = queue.shift();
+        updateQueue();
         moveToFloor(nextFloor);
     }
 }
@@ -40,8 +47,8 @@ function moveToFloor(floor) {
     isMoving = true;
     updateDirection(floor);
     updateStatus(`Lift moving to floor ${floor}.`);
-
-    const moveTime = Math.abs(currentFloor - floor) * 1000;
+    
+    const moveTime = Math.abs(currentFloor - floor) * 2500; 
     setTimeout(() => {
         currentFloor = floor;
         liftElement.style.bottom = `${floor * 100}px`;
@@ -54,7 +61,7 @@ function moveToFloor(floor) {
             updateStatus("Lift is stationary.");
             isMoving = false;
             updateDirection(null);
-            processQueue();
+            processQueue(); 
         }, 2000);
         
     }, moveTime);
@@ -77,4 +84,8 @@ function updateStatus(message) {
 function updateLog(message) {
     logElement.innerHTML += `<p>${message}</p>`;
     logElement.scrollTop = logElement.scrollHeight;
+}
+
+function updateQueue() {
+    queueElement.innerText = `Pending Requests: ${queue.join(', ')}`;
 }
